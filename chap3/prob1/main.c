@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include "copy.h"
 
-char line[MAXLINE]; //input line
-char longest[MAXLINE]; //logest input line
+char line[MAXLINE];
+char longest[MAXLINE];
 
 main() {
 	int len;
 	int max;
 	max = 0;
 
-	while(gets(line) != NULL) {
+	while((gets(line) != NULL)) {
 		len = strlen(line);
 
 		if(len > max) {
@@ -17,9 +17,10 @@ main() {
 			copy(line, longest);
 		}
 	}
-
-	if(max > 0)
-		printf("%s \n", longest);
+	
+	if(max > 0) 
+		printf("%s /n", longest);
 
 	return 0;
 }
+
