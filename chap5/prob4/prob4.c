@@ -10,7 +10,7 @@ int main()
   if((fd1 = creat("myfile", 0600)) == -1)
     perror("Does't Make myfile");
 
-   write(fd1, "Hello! Linux", 12); 
+   write(fd1, "Hello! Linux ", 12); 
    fd2 = dup(fd1);
    write(fd2, "Bye! Linux", 10); 
    exit(0); 
