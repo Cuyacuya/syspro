@@ -30,6 +30,7 @@
 
     close(fd);
     
-   for(int i=4;i>0;i--) printf("%s\n", savedText[i]);
+    for(int i=line-1;i>=0;i--) printf("%s\n", savedText[i]);
+    
 }
 
