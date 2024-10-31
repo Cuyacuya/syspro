@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
    }
 
    do {
-      printf("\Enter StudentID to search:");
+      printf("\nEnter StudentID to search:");
       if (scanf("%d", &id) == 1) {
          lseek(fd, (id-START_ID)*sizeof(record), SEEK_SET);
             if ((read(fd, (char *) &record, sizeof(record)) > 0) && (record.id != 0))
