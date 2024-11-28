@@ -5,17 +5,12 @@
 
 void alarmHandler(int signo);
 
+struct sigaction newact;
+
 int main() {
-    struct sigaction sa;
-
-    sa.sa_handler = alarmHandler;
-    sigemptyset(&sa.sa_mask);
-    sa.sa_flags = 0;
-
-    if (sigaction(SIGALRM, &sa, NULL) == -1) {
-        perror("sigaction");
-        exit(1);
-    }
+    newact.sa_handler = alarmHandler;
+    sigemptyset(&newact.sa_mask);
+    newact.sa_flags = 0;
 
     alarm(5);
 
